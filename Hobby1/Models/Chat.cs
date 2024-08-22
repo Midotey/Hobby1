@@ -11,6 +11,7 @@ namespace Hobby1.Models
         //[ForeignKey("User")]
         //public string UserId { get; set; } = null!;
         //public User? User { get; set; }
+        public string Title { get; set; }
         [NotMapped]
         public List<User> Users { get; set; } = new List<User>();
         [NotMapped]

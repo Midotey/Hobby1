@@ -6,8 +6,8 @@ namespace Hobby1.Models
     {
         [Required]
         public int Id { get; set; }
-        public string TextData { get; set; }
-        public int ChatId { get; set; }
+        public string? TextData { get; set; }
+        public int ChatId { get; set; } /*= null!;*/
         public Chat Chat { get; set; }
 
     }

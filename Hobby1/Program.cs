@@ -1,3 +1,6 @@
+using Hobby1.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Hobby1
 {
     public class Program
@@ -21,6 +24,11 @@ namespace Hobby1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<AppDbContext>(db =>
+            {
+                db.UseNpgsql(builder.Configuration.GetConnectionString("Default"));
+            });
 
             var app = builder.Build();
 
