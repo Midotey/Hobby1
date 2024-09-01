@@ -1,15 +1,20 @@
 ﻿using Hobby1.Data.Enum;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hobby1.Models
 {
-    public class User
+    public class User : IdentityUser
     {
+        //[Required]
+        //public string Id { get; set; }
         [Required]
-        public string Id { get; set; }
+        //[Remote(, ErrorMessage="User with that nickname already exists!")]
         public string Name { get; set; }
         public int Age { get; set; }
+        [Required]
         public GenderEnum Gender { get; set; }
         //[ForeignKey]
         [NotMapped]
