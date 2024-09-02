@@ -23,6 +23,9 @@ namespace Hobby1
 
 
 
+            ///TODO: щас повертеться и поэкспериментировать с гитом, попробовать сделать откат на прошлый коммит(вернуть как все было в ветке master до слияня(merge))и выслать в гитхаб.
+
+
 
             var builder = WebApplication.CreateBuilder(args);
 
